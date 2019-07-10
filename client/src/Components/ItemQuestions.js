@@ -96,7 +96,12 @@ export class ItemQuestions extends Component  {
     //You may create survey model outside the render function and use it in your App or component
     //The most model properties are reactive, on their change the component will change UI when needed.
     var model = new Survey.Model(this.json);
-    return (<Survey.Survey model={model} onComplete={this.onComplete}/>);
+    return (
+      <div>
+    <Survey.Survey model={model} onComplete={this.onComplete}/>
+    <div style={{height: "10rem"}}></div>
+    </div>
+    );
     /*
     //The alternative way. react Survey component will create survey model internally
     return (<Survey.Survey json={this.json} onComplete={this.onComplete}/>);

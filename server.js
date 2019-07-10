@@ -17,7 +17,8 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost/getyourshittogether" || "mongodb+srv://new_user:pw1234@cluster0-56amy.gcp.mongodb.net/test?retryWrites=true&w=majority")
+  .connect(process.env.MONGODB_URI || "mongodb://localhost/getyourshittogether")
+  .connect(process.env.MONGOLAB_URI || "mongodb+srv://new_user:pw1234@cluster0-56amy.gcp.mongodb.net/test?retryWrites=true&w=majority")
   .then(() => console.log('MongoDB Connected...'))
   .catch(err => console.log(err));
 

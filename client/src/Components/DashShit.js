@@ -14,11 +14,3 @@ export function ShitItem ({children}) {
   return (
   <li className="list-group-item" >{children}</li>)
 }
-
-export function DeleteBtn(props) {
-  return (
-    <span className="delete-btn" {...props} role="button" tabIndex="0">
-      ✗
-    </span>
-  );
-}
