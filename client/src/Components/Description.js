@@ -6,7 +6,7 @@ import MyModal from './MyModal';
 const Description = () => (
 
   <div >
-    <p className="description animated fadeIn">Are your friends and relatives telling you that they find your repulsive? Tired of finding dead cats under your piles of old newspapers? Then, it's time for you to git your $#!T together.  </p>
+    <p className="description animated fadeIn">Do your friends and relatives find your space repulsive? Are you tired of finding dead cats under your piles of old newspapers? Then, it's time for you to git your $#!T together!</p>
 
     <MyModal>Login/Register</MyModal>
 

@@ -33,16 +33,17 @@ class DashBody extends Component {
   loadShit = () => {
     API.getShit()
       .then(res =>
-        this.setState({ 
-          shit: res.data, 
-          item: "", 
+        this.setState({
+          shit: res.data,
+          item: "",
           importance: "",
           sentiment: "",
           usefulness: "",
           replaceable: "",
           danger: "",
           rating: "",
-          journal: "" })
+          journal: ""
+        })
       )
       .catch(err => console.log(err));
   };
@@ -52,6 +53,7 @@ class DashBody extends Component {
       .then(res => this.loadShit())
       .catch(err => console.log(err));
   };
+
 
   loadJournal = () => {
     API.getJournals()
@@ -67,18 +69,18 @@ class DashBody extends Component {
   render () {
     return (
       <div className="container dashbody">
-          <div className="row blankrow">
-              <div className="col-12">
-                  <div id="randomQuote"></div>
-              </div>
+        <div className="row blankrow">
+          <div className="col-12">
+            <div id="randomQuote"></div>
           </div>
-          <Welcome />
-          <div className="row pastEntries">
-            <div className="col-lg-6">
-              <h3>The $#!T List</h3>
-              <p>Deal with this $#!t first...</p>
-              {this.state.shit.length ? (
-                <Shit>
+        </div>
+        <Welcome />
+        <div className="row pastEntries">
+          <div className="col-lg-6">
+            <h3>The $#!T List</h3>
+            <p>Deal with this $#!T first...</p>
+            {this.state.shit.length ? (
+              <Shit>
                 {this.state.shit.map(shit => (
                   <ShitItem key={shit._id}>
                     <Link to={"/shit/" + shit._id}>
@@ -86,16 +88,17 @@ class DashBody extends Component {
                     </Link>
                     <button
                       type="delete"
-                      title="Delete $#!T"
+                      title="Delete this $#!T!"
                       onClick={() => this.deleteShit(shit._id)}
                     >
                       <span role="img" alt="X" aria-label="poo">💩</span>
                     </button>
-                    </ShitItem>
+                  </ShitItem>
                 ))}
               </Shit>
+
                 ) : (
-                <h3>No $#!T to Show For</h3>
+                <h3>No $#!T to Show</h3>
                 )}
             </div>
             <div className="col-lg-6">

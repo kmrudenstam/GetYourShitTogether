@@ -6,17 +6,24 @@
     max-width: 100% !important;
     min-width: 100% !important;
     max-height: 300px !important;
-    border: solid rgb(146, 146, 146) 5px;
+    border: solid rgb(50,205,50) 5px;
     margin-top: 25px;
+    /* padding: 1px; */
 }
 
 .randomquote{
     font-size: 20px;
-   
+    color: #337AB7;
     font-family: 'Exo 2', sans-serif !important;
     margin-top: 40px;
-    /* padding-bottom: 10px; */
+    padding: 10px;
+    /* background: #343a40;
+    opacity: .8; */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+
 }
+
 
 .dashHeader{
     margin-top: 20px;

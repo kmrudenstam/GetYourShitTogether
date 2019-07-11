@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Modal } from 'react-bootstrap';
+import "./Compstyles/Descriptionstyle.css";
 
 export default class MyModal extends Component {
   constructor(props, context) {
@@ -24,13 +25,14 @@ export default class MyModal extends Component {
   render() {
     return (
       <>
-        <Button variant="primary" onClick={this.handleShow}>
-          Login
+        <div className="login_button">
+          <Button variant="primary" size="lg" onClick={this.handleShow}>
+            Login
         </Button>
-
-        <Modal show={this.state.show} onHide={this.handleClose} animation={false}>
-          <Modal.Header closeButton>
-            <Modal.Title>Login to Get Your $#!T Together</Modal.Title>
+        </div>
+        <Modal size="sm" show={this.state.show} onHide={this.handleClose} animation={false}>
+          <Modal.Header>
+            <Modal.Title>Get Your $#!T Together!</Modal.Title>
           </Modal.Header>
 
           <Modal.Body>

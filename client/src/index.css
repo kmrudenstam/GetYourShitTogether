@@ -2,9 +2,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  /* background-color: aquamarine !important;
-  background-image: url("https://hdwallpapersmania.com/wp-content/uploads/2019/04/minimalist-backgrounds-download-wallpapers-download.jpg"); */
-  /* background: linear-gradient(0deg, rgba(81,130,144,1) 0%, rgba(255,255,255,1) 100%); */
+  background-color: rgb(41, 53, 191) !important;
+  background: url("background.jpg");
+  color: rgb(41, 53, 191);
 }
 .sv_main .sv_custom_header {
   background-color: #ffffff !important;

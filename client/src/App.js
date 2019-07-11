@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import * as Survey from "survey-react";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "survey-react/survey.css";
 // import SurveyCreator from "./SurveyCreator";
 import ItemQuestions from "./Components/ItemQuestions";
@@ -46,7 +46,7 @@ widgets.bootstrapslider(Survey);
 
 class App extends Component {
 
-   render() {
+  render() {
     Survey.Survey.cssType = "bootstrap";
     var model = new Survey.Model(this.json);
     return (
@@ -56,34 +56,34 @@ class App extends Component {
           <Nav />
           <Header />
           <Switch> {/* note from Robert: used Switch from react-dom-router so detail page can function properly, made some paths direct and made header and footer top-level */}
-            <Route exact path="/dashboard" component={DashBody} />   
+            <Route exact path="/dashboard" component={DashBody} />
             <Route path="/Home" exact render={
               () => {
                 return (
                   <div>
-                    <h1>Welcome! Get Your <span role="img" alt="$#!T">💩</span> Together</h1>
+                    <h1>Welcome, Fellow $#!T Head!<span role="img" alt="$#!T">💩</span> </h1>
                   </div>
                 )
               }
             } />
             <Route exact path="/" component={Description} />
             <Route path="/add-shit" exact render={
-              ()=> {
+              () => {
                 return (
-                <div className="itemQuestDiv">
-                  <h1 className="surveyTitle">Add Your $#!T</h1>
-                  <p className="questInstructions">Just fill out this quick form to add an item you want to get rid of. </p> 
-                  <ItemQuestions />
-                  <div id="yourScore"></div>
-                </div>
-              )
-            }
-          }/>
-            <Route exact path="/journal" component={JournalQs}/>
-            <Route exact path="/shit/:id" component={Detail}/>
-        </Switch>
-        <Footer />
-      </div>
+                  <div className="itemQuestDiv">
+                    <h1 className="surveyTitle">What's on Your $#!T List?</h1>
+                    <p className="questInstructions">Use this form to add $#!T that is cluttering your life. </p>
+                    <ItemQuestions />
+                    <div id="yourScore"></div>
+                  </div>
+                )
+              }
+            } />
+            <Route exact path="/journal" component={JournalQs} />
+            <Route exact path="/shit/:id" component={Detail} />
+          </Switch>
+          <Footer />
+        </div>
       </Router>
     );
   }
